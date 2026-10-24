@@ -1,0 +1,431 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080810;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ===== LOGO & HEADINGS ===== */
+.logo,
+.hero h2 {
+    color: transparent;
+    background: linear-gradient(to right, #ff8fc7, #7777ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 28px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+h2 {
+    color: transparent;
+    background: linear-gradient(to right, #ff8fc7, #7777ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+}
+
+/* ===== NAVBAR ===== */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background: rgba(15, 15, 30, 0.95);
+    border-bottom: 1px solid rgba(255, 143, 199, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+/* Navbar links, if present */
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ff8fc7;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    width: 100%;
+    min-height: 350px;
+    padding: 90px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(
+            ellipse at top,
+            rgba(91, 57, 130, 0.25),
+            transparent 65%
+        );
+}
+
+.hero h2 {
+    font-size: clamp(30px, 5vw, 48px);
+}
+
+.hero h3 {
+    padding: 20px 0;
+    font-size: 20px;
+    color: #d0cce0;
+    font-weight: normal;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* ===== BUTTON ===== */
+.a {
+    display: inline-block;
+    border-radius: 30px;
+    padding: 13px 30px;
+    border: none;
+    width: fit-content;
+    color: white;
+    background: linear-gradient(to right, #ff70b8, #5757ed);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(150, 80, 255, 0.35);
+}
+
+/* ===== CARD CONTAINER ===== */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.card {
+    width: 260px;
+    min-height: 180px;
+    padding: 30px 25px;
+    background: linear-gradient(145deg, #191927, #11111b);
+    border: 1px solid #303044;
+    border-radius: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #b76cff;
+}
+
+.card h4 {
+    color: #ffcf70;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* ===== NS SECTION ===== */
+.ns {
+    background-color: transparent;
+    width: 100%;
+    min-height: 80px;
+    padding: 15px;
+    text-align: center;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: bold;
+    color: transparent;
+    background-image: linear-gradient(to right, #ff8fc7, #7777ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* ===== PRODUCT HEADING ===== */
+#product-heading {
+    padding: 35px 20px 10px;
+    text-align: center;
+    font-size: clamp(30px, 4vw, 46px);
+    background: linear-gradient(to right, #ff8fc7, #7777ff);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* ===== PRODUCT CONTAINER ===== */
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px 6%;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+    margin: 5px;
+    width: 300px;
+    max-width: 100%;
+    background: #151520;
+    border: 1px solid #2b2b3c;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(100, 75, 200, 0.2);
+    border-color: #7777ff;
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.04);
+}
+
+.product-text {
+    padding: 25px 20px;
+}
+
+.product-text h4 {
+    color: #ffcf70;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.product-text h6 {
+    color: #ff8fc7;
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+/* ===== ADD TO CART BUTTON ===== */
+.product-text .cart {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #d95f9e, #5555e8);
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-text .cart:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #11111c;
+    color: #d4d4df;
+    padding: 45px 6% 20px;
+    border-top: 1px solid #29293a;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.footer-section {
+    width: 22%;
+    min-width: 180px;
+    margin-bottom: 20px;
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #10101b;
+    color: #d6d6e2;
+    padding: 45px 7% 0;
+    border-top: 1px solid #343044;
+}
+
+/* Footer Layout */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Footer Columns */
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Footer Headings */
+.footer-col h3 {
+    color: #ff8fc7;
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+/* Footer Paragraphs */
+.footer-col p {
+    color: #bcbccc;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 8px;
+}
+
+/* Footer Links */
+.footer-col a {
+    display: block;
+    width: fit-content;
+    color: #bcbccc;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 12px;
+    transition: 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #ff8fc7;
+    transform: translateX(4px);
+}
+
+/* Contact Links */
+.footer-col p a {
+    color: #bcbccc;
+    margin-bottom: 0;
+}
+
+.footer-col p a:hover {
+    color: #8888ff;
+}
+
+/* Copyright Section */
+.footer-bottom {
+    border-top: 1px solid #303044;
+    background: #0a0a12;
+    margin: 0 -7.53%;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #9292a5;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .footer {
+        padding: 35px 20px 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-col {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .footer-bottom {
+        margin: 0 -20px;
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .nav {
+        padding: 15px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 65px 15px;
+        min-height: 300px;
+    }
+
+    .hero h3 {
+        font-size: 17px;
+    }
+
+    .card-container {
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .product-container {
+        padding: 25px 15px;
+        gap: 20px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    #product-heading {
+        padding: 25px 15px;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+}
